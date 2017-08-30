@@ -228,20 +228,5 @@ footer {
     background-repeat: no-repeat;
     width: auto;
   }
-  .main, .text {
-    width: 100%;
-    justify-content: center;
-  }
-  .text .container {
-    align-content: space-around;
-    justify-content: center;
-  }
-  .container {
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-  }
-  footer {
-    width: 100%;
-  }
+
 }
