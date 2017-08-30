@@ -1,0 +1,220 @@
+/*Basic page styling*/
+html,
+body {
+  font-size: 18px;
+  line-height: 1.4em;
+  font-family: Helvetica, sans-serif;
+  margin: 0px;
+}
+.container {
+  width: 960px;
+  height: auto;
+}
+
+/*Header*/
+header {
+  background-image: url("https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-5/tortoiseshell-optics/resources/images/glasses-bg.png");
+  repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 25rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  background-color: cadetblue;
+  height: 3rem;
+  margin-top: 1rem;
+}
+.headline, .navigation {
+  display: flex;
+  align-items: center;
+  flex-shrink: 1;
+  width: 50%;
+}
+.headline img {
+  height: 1.5rem;
+  margin-left: 2rem;
+  margin-right: 1rem;
+}
+.headline h2 {
+  font-size: 1rem;
+
+}
+.navigation ul li {
+  list-style: none;
+  display: inline-flex;
+  margin: 1rem 2rem;
+}
+/*ul {
+  display: flex;
+  align-items: center;
+}*/
+/*li:hover {
+  color: cadetblue;
+  background-color: white;
+}*/
+
+header .flex {
+  /*align-items: flex-end;
+  justify-content: flex-end;*/
+  width: 960px;
+  text-align: right;
+}
+.title {
+  display: inline-block;
+  margin-top: 10rem;
+  margin-right: -2rem;
+  padding: 0.75rem 5rem;
+  background-color: white;
+  line-height: 2.4rem;
+}
+h1 {
+  color: black;
+  font-size: 2rem;
+}
+/*Body Icons*/
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 960px;
+  margin: auto;
+}
+.icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 720px;
+}
+.paper, .ruler, .truck {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 8rem;
+  margin: 3rem;
+  width: 200px;
+  flex: 0 1 200px;
+}
+.pic img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3.5rem;
+  height: auto;
+}
+.icons .pic span {
+  align-content: baseline;
+}
+.ruler, .truck {
+  justify-content: space-around;
+
+
+}
+.ruler img, .truck img {
+  width: 5rem;
+}
+.text .container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 960px;
+  margin-bottom: 5rem;
+}
+.philosophy, .appointments {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  margin-right: 5rem;
+}
+.text h3 {
+  font-size: 1rem;
+  color: white;
+  background-color: cadetblue;
+  padding-left: 1.25rem;
+  padding-top:0.5rem;
+  padding-bottom: 0.5rem;
+  width: 10rem;
+  margin-bottom: 1rem;
+}
+/*Footer*/
+footer {
+  height: 10rem;
+  width: 960px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: auto;
+}
+.footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 960px;
+}
+.footer img {
+  height: 2rem;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1rem;
+}
+.footer p {
+  justify-content: center;
+  align-items: center;
+
+}
+/*Media Queries Tablet*/
+@media only screen and (max-width: 970px) and (min-width: 500px) {
+  .header {
+    width: 100%;
+    margin-top: 0;
+    display: flex;
+  }
+  header {
+    height: 22rem;
+  }
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 0;
+    max-width: inherit;
+  }
+  .container {
+    width: 100%;
+
+  }
+  /*.header {
+    margin-top: 0;
+    width: 100%;
+    display: flex;
+    flex: 0 2 50%;
+  }*/
+  li {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  .flex .title {
+    margin-right: 2rem;
+    padding: 0.75rem 4rem;
+  }
+  header .flex {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+/*Media Queries Mobile*/
+@media only screen and (max-width: 760px) , (min-width: 500px) {
+  .headline h2 {
+    display: none;
+  }
+}
