@@ -30,7 +30,7 @@ header {
   height: 3rem;
   margin-top: 1rem;
 }
-.headline, .navigation {
+header .headline, .navigation {
   display: flex;
   align-items: center;
   flex-shrink: 1;
@@ -50,10 +50,9 @@ header {
   display: inline-flex;
   margin: 1rem 2rem;
 }
-/*ul {
-  display: flex;
-  align-items: center;
-}*/
+.mobile-nav {
+  display: none;
+}
 /*li:hover {
   color: cadetblue;
   background-color: white;
@@ -68,10 +67,12 @@ header .flex {
 .title {
   display: inline-block;
   margin-top: 10rem;
-  margin-right: -2rem;
+  /*margin-right: -2rem;*/
   padding: 0.75rem 5rem;
   background-color: white;
   line-height: 2.4rem;
+  border-top-right-radius: 3.5rem;
+  border-bottom-left-radius: 3.5rem;
 }
 h1 {
   color: black;
@@ -120,11 +121,11 @@ h1 {
 .ruler img, .truck img {
   width: 5rem;
 }
-.text .container {
+.main .text .container {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: flex-end;
   max-width: 960px;
   align-content: space-around;
   /*margin-bottom: 5rem;*/
@@ -132,6 +133,7 @@ h1 {
 .text {
   display: flex;
   justify-content: center;
+  align-content: center;
 }
 .philosophy, .appointments {
   width: 35%;
@@ -178,7 +180,11 @@ footer {
 
 }
 /*Media Queries Tablet*/
-@media only screen and (max-width: 970px) and (min-width: 761px) {
+
+@media only screen and (max-width: 970px)/* , (min-width: 761px)*/ {
+  body {
+    max-width: 100%;
+  }
   .header {
     width: 100%;
     margin-top: 0;
@@ -198,17 +204,11 @@ footer {
     width: 100%;
 
   }
-  /*.header {
-    margin-top: 0;
-    width: 100%;
-    display: flex;
-    flex: 0 2 50%;
-  }*/
   li {
     font-size: 1rem;
     font-weight: bold;
   }
-  .flex .title {
+  .title {
     margin-right: 2rem;
     padding: 0.75rem 4rem;
   }
@@ -218,8 +218,22 @@ footer {
     justify-content: flex-end;
     align-items: center;
   }
+  .icons {
+    max-width: 100%;
+  }
+  .title {
+    padding: 0.75rem 4rem;
+    margin-top: 5rem;
+    margin-right: 2rem;
+  }
+  .title h1 {
+    font-size: 1.33rem;
+  }
+  .main, footer, .footer {
+    max-width: 100%;
+  }
 }
-@media only screen and (max-width: 760px) and (min-width: 650px) {
+@media only screen and (max-width: 760px)/* and (min-width: 650px)*/ {
   .headline h2 {
     display: none;
   }
@@ -232,6 +246,7 @@ footer {
   header {
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: 40%;
     width: auto;
   }
   .container {
@@ -256,6 +271,69 @@ footer {
   }
   footer {
     max-width: 630px;
+  }
+  header {
+    background-position: 30%;
+  }
+}
+@media only screen and (max-width: 580px) {
+  .navigation {
+    display: none;
+  }
+  .navigation #fit {
+    margin: 1rem;
+  }
+  .mobile-nav {
+    display: block;
+  }
+  body, .main, footer, .footer {
+    max-width: 100%;
+  }
+  header {
+    height: 17rem;
+    background-position: 25%;
+  }
+  .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0px;
+    margin-top: 10.5rem;
+    width: 100%;
+    border-radius: 0;
+    max-height: 2.5rem;
+    padding: 0;
+  }
+  .title h1 {
+    font-size: 1rem;
+  }
+  .main .icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .paper, .ruler, .truck {
+    justify-content: space-around;
+    flex: 0 1 60%;
+  }
+
+  }
+  .main .mobile  {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .text h3 {
+    text-align: center;
+    padding
+  }
+  footer p {
+    display: none;
+  }
+  .footer {
+    justify-content: center;
   }
 }
 /*Media Queries Mobile*/
